@@ -16,8 +16,8 @@
   margin-top: 30px;
   text-decoration: none;
   color: #706263;
+  cursor: pointer;
 }
-
 /* main {
   padding: 20px;
 } */
@@ -33,6 +33,10 @@ header nav ul {
   display: flex;
   margin: 20px;
   gap: 30px;
+}
+
+ul a {
+  text-decoration: none;
 }
 .header-logo {
   align-items: center;
@@ -84,7 +88,8 @@ header nav ul li {
   display: block;
   padding: 20px;
 }
-.contact-container form input {
+/* .contact-container form */
+input {
   line-height: 34px;
   padding: 0 10px;
   font-size: 1rem;
@@ -118,7 +123,6 @@ header nav ul li {
   padding: 14px;
 }
 .welcome {
-  backdrop-filter: blur(8px);
   color: #fff;
 }
 .welcome .welcome-title {
@@ -153,8 +157,8 @@ header nav ul li {
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 0.9px;
-  left: 65%;
+  bottom: 30px;
+  left: 15%;
   transform: translateX(-50%);
 }
 
@@ -162,7 +166,7 @@ header nav ul li {
 
 /* Start of how it works section */
 .how-it-workers-container {
-  margin-top: 5rem;
+  margin-top: 2rem;
   height: 500px;
   display: flex;
   justify-content: center;
@@ -217,15 +221,25 @@ header nav ul li {
   /* box-shadow: 0px 80px 50px -30px rgba(0, 0, 0, 0.15); */
 }
 
+.how-it-workers-container h3 {
+  font-size: 3rem;
+}
+
 /* Start of services section */
 .services {
-  height: 400px;
+  height: 500px;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   gap: 20px;
+}
+
+.services h3 {
+  font-size: 3rem;
+  color: #288f94;
+  margin-top: 2px;
 }
 
 .row-one,
@@ -238,7 +252,8 @@ header nav ul li {
 /* Start of form-container */
 
 .form-container {
-  margin-top: 5rem;
+  margin-top: 3rem;
+  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -257,16 +272,23 @@ header nav ul li {
   text-align: left;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .patient-form-container form {
   padding: 10px;
+  display: none;
 }
 
 .patient-form-container label {
   margin-bottom: 5px;
-  display: block;
+  display: flex;
 }
+
+/* .input {
+  margin-bottom: 10px;
+  padding: 5px;
+} */
 
 .form-link {
   color: white;
@@ -281,12 +303,56 @@ header nav ul li {
 
 .links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: 50%;
   align-items: center;
-  background-color: #706263;
-  gap: 5px;
+  justify-content: center;
+  /* background-color: #706263; */
+  gap: 25px;
   padding: 5px;
-  text-transform: uppercase;
-  font-size: 24px;
+  text-transform: capitalize;
+  font-size: 1.2rem;
 }
+*/ #newPatientForm {
+  display: none;
+  position: relative;
+  /* flex-direction: column; */
+}
+
+#alreadyPatientForm {
+  display: none;
+}
+
+.submitBtn {
+  position: absolute;
+  bottom: -25px;
+  right: 30%;
+  margin: auto;
+  width: 7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.heading {
+  text-align: center;
+  margin: 9px;
+}
+
+.appointmentBtn {
+  /* position: absolute; */
+  margin: auto;
+}
+.form-link {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.form-link:hover {
+  color: #e6e6e6;
+}
+.input {
+  margin-bottom: 15px;
+}
+
+/* comment */

@@ -1,25 +1,27 @@
 {
-  "doctors": [
-    {
-      "name": "Dr. John Doe",
-      "contact": "+1234567890",
-      "specialization": "Individual Counseling"
-    },
-    {
-      "name": "Dr. Jane Smith",
-      "contact": "+9876543210",
-      "specialization": "Individual Counseling"
-    },
-    {
-      "name": "Dr. Michael Johnson",
-      "contact": "+1112223333",
-      "specialization": "PTSD & Trauma"
-    },
-    {
-      "name": "Dr. Emily Davis",
-      "contact": "+4445556666",
-      "specialization": "PTSD & Trauma"
-    }
-  ],
-  "patients":[]
+  "data": {
+    "doctors": [
+      {
+        "name": "Dr. John Doe",
+        "contact": "+1234567890",
+        "specialization": "Individual Counseling"
+      },
+      {
+        "name": "Dr. Jane Smith",
+        "contact": "+9876543210",
+        "specialization": "Individual Counseling"
+      },
+      {
+        "name": "Dr. Michael Johnson",
+        "contact": "+1112223333",
+        "specialization": "PTSD & Trauma"
+      },
+      {
+        "name": "Dr. Emily Davis",
+        "contact": "+4445556666",
+        "specialization": "PTSD & Trauma"
+      }
+    ],
+    "patients": []
+  }
 }
