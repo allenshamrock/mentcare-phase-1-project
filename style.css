@@ -313,7 +313,7 @@ input {
   text-transform: capitalize;
   font-size: 1.2rem;
 }
-*/ #newPatientForm {
+#newPatientForm {
   display: none;
   position: relative;
   /* flex-direction: column; */
@@ -355,4 +355,33 @@ input {
   margin-bottom: 15px;
 }
 
-/* comment */
+/* faq section */
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.faq-container h3{
+  text-align: center;
+  padding: 10px;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.answer {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+}

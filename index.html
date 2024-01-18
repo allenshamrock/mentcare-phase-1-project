@@ -240,25 +240,14 @@
             <form action="submit" id="newPatientForm" class="flex-col">
               <h3 class="heading">NEW APPOINTMENT</h3>
                <label for="First">First Name</label>
-               <input type="text" class="input">
+               <input type="text" class="input"  id="firstName" >
                 <label for="Second">Second Name</label>
-               <input type="text"class="input">       
+               <input type="text"class="input"  id="secondName">       
               <label for="National ID">National ID</label>
-              <input type="text" class="input">
+              <input type="text" class="input" id="nationalId">
               <label for="Tel">Telephone No:</label>
-               <!-- <div class="checkbox-container">
-                <input type="checkbox" name="day" value="day">
-                <label for="day"> Monday</label><br>
-                <input type="checkbox" name="day" value="day">
-                <label for="day"> Tuesday</label><br>
-                <input type="checkbox" name="day" value="day">
-                <label for="day"> Wednesday</label><br>
-                <input type="checkbox" name="day" value="day">
-                <label for="day"> Thursday</label><br>
-                <input type="checkbox" name="day" value="day">
-                <label for="day"> Friday</label><br>
-            </div> -->
-            <button class="btn submitBtn" >Submit </button>
+              <input type="text"class="input"  id="telephoneNo"> 
+            <button  class="btn submitBtn" id="btnSubmit" >Submit </button>
           </form>
 
             <form action="submit" id="alreadyPatientForm" class="flex-col">
@@ -266,16 +255,35 @@
               <div class="alreadyPatient flex-col">
                 <label for="National ID">National ID</label>
                 <input type="text" class="input"> 
-              <button class="btn appointmentBtn" id="reqAppointment">Request Appointment</button>
+              <button class="btn appointmentBtn" id="eq">Request Appointment</button>
               </div>
           </form>
            </div>
         </section>
 
         <!-- FAQ section -->
-        <section class="faq" id="faqs">
+          <section class="faq-container" id="faqs" >
+            <h3>FREQUENT ASKED QUESTIONS</h3>
+        <div class="faq-item">
+            <div class="question">What is the current global health crisis?</div>
+            <div class="answer">The world is currently facing a widespread and gradual crisis that threatens the foundation
+                of Good Health and Well-being.</div>
+        </div>
 
-        </section>
+        <div class="faq-item">
+            <div class="question">What traditional health concerns have been addressed?</div>
+            <div class="answer">While significant strides have been made in addressing traditional health concerns such as
+                infectious diseases and maternal mortality.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="question">What is the emerging threat to global well-being?</div>
+            <div class="answer">A silent epidemic continues to escalate, posing a formidable threat to global well-being.
+                Mental health, often relegated to the shadows of public health discussions, has emerged as a leading
+                cause of death worldwide, challenging the core tenets of SDG3(Good Health and Well-Being).</div>
+        </div>
+    </section>
+        
       
   </body>
 </html>

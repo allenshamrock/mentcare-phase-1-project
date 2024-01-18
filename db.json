@@ -1,37 +1,64 @@
 {
-  "data": {
-    "doctors": [
-      {
-        "name": "Dr. John Doe",
-        "contact": "+1234567890",
-        "specialization": "Individual Counseling"
-      },
-      {
-        "name": "Dr. Jane Smith",
-        "contact": "+9876543210",
-        "specialization": "Parent Mood & Anxiety"
-      },
-      {
-        "name": "Dr. Michael Johnson",
-        "contact": "+1112223333",
-        "specialization": "Couples counselling"
-      },
-      {
-        "name": "Dr. Emily Davis",
-        "contact": "+4445556666",
-        "specialization": "Grief & Loss"
-      },
-       {
-         "name": "Dr. Jagaban ",
-         "contact": "+4299999945",
-         "specialization": "PGender Identity"
-       },
-        {
-          "name": "Dr.Philips Manuel",
-          "contact": "+347845556666",
-          "specialization": "PTSD & Trauma"
-        }
-    ],
-    "patients": []
-  }
+  "patients": [
+    {
+      "firstName": "Allen",
+      "secondName": "Shamrock",
+      "nationalId": "3689755",
+      "telephoneNo": "0757772601",
+      "id": 1
+    },
+    {
+      "firstName": "Kanyi",
+      "secondName": "East",
+      "nationalId": "3689755",
+      "telephoneNo": "0757772601",
+      "id": 2
+    },
+    {
+      "firstName": "Katt",
+      "secondName": "Williams",
+      "nationalId": "34680785",
+      "telephoneNo": "0720247980",
+      "id": 3
+    },
+    {
+      "firstName": "Mr",
+      "secondName": "Money",
+      "nationalId": "36566773",
+      "telephoneNo": "0757772601",
+      "id": 4
+    }
+  ],
+  "doctors": [
+    {
+      "name": "Dr. John Doe",
+      "contact": "+1234567890",
+      "specialization": "Individual Counseling"
+    },
+    {
+      "name": "Dr. Jane Smith",
+      "contact": "+9876543210",
+      "specialization": "Parent Mood & Anxiety"
+    },
+    {
+      "name": "Dr. Michael Johnson",
+      "contact": "+1112223333",
+      "specialization": "Couples counselling"
+    },
+    {
+      "name": "Dr. Emily Davis",
+      "contact": "+4445556666",
+      "specialization": "Grief & Loss"
+    },
+    {
+      "name": "Dr. Jagaban ",
+      "contact": "+4299999945",
+      "specialization": "PGender Identity"
+    },
+    {
+      "name": "Dr.Philips Manuel",
+      "contact": "+347845556666",
+      "specialization": "PTSD & Trauma"
+    }
+  ]
 }

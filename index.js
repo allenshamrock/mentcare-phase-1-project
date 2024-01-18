@@ -12,23 +12,45 @@ function toggleForm(formId) {
     currentForm = form;
   }
 }
-const url = "http://localhost:3000/data";
+
 const reqAppointment = document.getElementById("reqAppointment");
-function fetchData() {
-  fetch(url)
+function sendData(patientObj) {
+  fetch(" http://localhost:3000/patients", {
+    method: "POST",
+    headers: {
+      "content-Type": "application/json",
+    },
+
+    body: JSON.stringify(patientObj),
+  })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Failed to fetch");
+        throw new Error(`Failed to post data. Status: ${response.status}`);
       }
       return response.json();
     })
-    .then((data) => {
-      console.log(data);
-    });
+    .then((data) => console.log(data))
+    .catch((error) => console.error("Failed to post data", error));
 }
 
-fetchData();
+//Event Listener
+const form = document
+  .querySelector("#newPatientForm")
+  .addEventListener("submit", handleSubmit);
+// console.log(form)
+
+//Event handler
+function handleSubmit(e) {
+  e.preventDefault();
+  //console.log('I have been submitted')
+  let patientObj = {
+    firstName: e.target.firstName.value,
+    secondName: e.target.secondName.value,
+    nationalId: e.target.nationalId.value,
+    telephoneNo: e.target.telephoneNo.value,
+  };
+  //console.log(patientObj);
+  sendData(patientObj);
+}
 
 //using POST method to post patients data to db server
-
-
