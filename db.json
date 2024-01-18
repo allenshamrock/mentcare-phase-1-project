@@ -9,18 +9,28 @@
       {
         "name": "Dr. Jane Smith",
         "contact": "+9876543210",
-        "specialization": "Individual Counseling"
+        "specialization": "Parent Mood & Anxiety"
       },
       {
         "name": "Dr. Michael Johnson",
         "contact": "+1112223333",
-        "specialization": "PTSD & Trauma"
+        "specialization": "Couples counselling"
       },
       {
         "name": "Dr. Emily Davis",
         "contact": "+4445556666",
-        "specialization": "PTSD & Trauma"
-      }
+        "specialization": "Grief & Loss"
+      },
+       {
+         "name": "Dr. Jagaban ",
+         "contact": "+4299999945",
+         "specialization": "PGender Identity"
+       },
+        {
+          "name": "Dr.Philips Manuel",
+          "contact": "+347845556666",
+          "specialization": "PTSD & Trauma"
+        }
     ],
     "patients": []
   }
