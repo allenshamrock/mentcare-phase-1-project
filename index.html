@@ -240,21 +240,21 @@
             <form action="submit" id="newPatientForm" class="flex-col">
               <h3 class="heading">NEW APPOINTMENT</h3>
                <label for="First">First Name</label>
-               <input type="text" class="input"  id="firstName" >
+               <input type="text" class="input"  id="firstName" required >
                 <label for="Second">Second Name</label>
-               <input type="text"class="input"  id="secondName">       
+               <input type="text"class="input"  id="secondName" required>       
               <label for="National ID">National ID</label>
-              <input type="text" class="input" id="nationalId">
+              <input type="text" class="input" id="nationalId" required>
               <label for="Tel">Telephone No:</label>
-              <input type="text"class="input"  id="telephoneNo"> 
+              <input type="text"class="input"  id="telephoneNo" required> 
             <button  class="btn submitBtn" id="btnSubmit" >Submit </button>
           </form>
 
             <form action="submit" id="alreadyPatientForm" class="flex-col">
              <h3 class="heading">BEEN HERE BEFORE?</h3>    
               <div class="alreadyPatient flex-col">
-                <label for="National ID">National ID</label>
-                <input type="text" class="input"> 
+                <label for="therapist">Therapist's Name</label>
+                <input type="text" class="input" id="drName"> 
               <button class="btn appointmentBtn" id="eq">Request Appointment</button>
               </div>
           </form>
@@ -263,7 +263,7 @@
 
         <!-- FAQ section -->
           <section class="faq-container" id="faqs" >
-            <h3>FREQUENT ASKED QUESTIONS</h3>
+  
         <div class="faq-item">
             <div class="question">What is the current global health crisis?</div>
             <div class="answer">The world is currently facing a widespread and gradual crisis that threatens the foundation

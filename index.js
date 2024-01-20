@@ -13,7 +13,7 @@ function toggleForm(formId) {
   }
 }
 
-const reqAppointment = document.getElementById("reqAppointment");
+//using POST method to post patients data to db server
 function sendData(patientObj) {
   fetch(" http://localhost:3000/patients", {
     method: "POST",
@@ -29,7 +29,11 @@ function sendData(patientObj) {
       }
       return response.json();
     })
-    .then((data) => console.log(data))
+    .then((data) => {
+      console.log(data);
+      alert("Session booked");
+    })
+
     .catch((error) => console.error("Failed to post data", error));
 }
 
@@ -53,4 +57,40 @@ function handleSubmit(e) {
   sendData(patientObj);
 }
 
-//using POST method to post patients data to db server
+// Get method to fetch for the Dr names
+// Event handler
+document
+  .querySelector("#alreadyPatientForm")
+  .addEventListener("submit", handlerSubmit);
+
+//Get method to fetch for the Dr names
+function handlerSubmit(e) {
+  e.preventDefault();
+  const doctorName = e.target.value;
+  fetchTherapists(doctorName);
+}
+
+// Get method to fetch for the Dr names
+function fetchTherapists(doctorName) {
+  fetch("http://localhost:3000/doctors")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to fetch data: Status: ${response.status}`);
+      }
+      return response.json();
+    })
+
+    .then((doctors) => {
+      const input = document.getElementById("drName").value.toUpperCase();
+      console.log(input)
+      const isDoctorAvailable = doctors.filter((doctor) => doctor.doctorName);
+
+      if (isDoctorAvailable === input) {
+        // If there is an available doctor, show the alert
+        alert(`Appointment booked with a doctor having the name ${input}`);
+      } else {
+        // Handle case when no doctors are available
+        alert("Sorry, no available doctors with the provided name.");
+      }
+    });
+}
