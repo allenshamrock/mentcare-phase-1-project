@@ -14,7 +14,8 @@ Running
 In the Appointment section there are two forms new appointment and been here before
 For the new appointment form a user inputs their details and the window alerts that sesion has been booked,
 this is recorded to our db.json by a POST method.
-For the been here before form, a user can input the therapists name that has been their handler for the sessions.This form fullfils the GET request,we are reaching the and communicating with the server to access the therapist's name and then there is an alert fired to assure the patient that the session is confirmed.
+For the been here before form, a user can input the therapists name that has been their handler for the sessions.This form fullfils the GET request,we are reaching the and communicating with the server to access the therapist's name, if the name is in our database and then there is an alert fired to assure the patient that the session is confirmed.
+
 
 Trello board link https://trello.com/b/WRR1NHpA/mentcare-board
 Excaliboard link https://excalidraw.com/

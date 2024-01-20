@@ -31,7 +31,9 @@ function sendData(patientObj) {
     })
     .then((data) => {
       console.log(data);
-      alert("Session booked");
+      const inputFirstName = document.getElementById('firstName').value
+      const inputSecondName = document.getElementById('secondName').value
+      alert(`${inputFirstName} ${inputSecondName} your appointment has been made`);
     })
 
     .catch((error) => console.error("Failed to post data", error));
@@ -71,7 +73,7 @@ function handlerSubmit(e) {
 }
 
 // Get method to fetch for the Dr names
-function fetchTherapists(doctorName) {
+function fetchTherapists() {
   fetch("http://localhost:3000/doctors")
     .then((response) => {
       if (!response.ok) {
@@ -79,13 +81,14 @@ function fetchTherapists(doctorName) {
       }
       return response.json();
     })
-
     .then((doctors) => {
-      const input = document.getElementById("drName").value.toUpperCase();
-      console.log(input)
-      const isDoctorAvailable = doctors.filter((doctor) => doctor.doctorName);
+      const input = document.getElementById("drName").value;
+      console.log(input);
+      const isDoctorAvailable = doctors.find((doctor) => {
+        return doctor.doctorName === input;
+      });
 
-      if (isDoctorAvailable === input) {
+      if (isDoctorAvailable) {
         // If there is an available doctor, show the alert
         alert(`Appointment booked with a doctor having the name ${input}`);
       } else {
