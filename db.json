@@ -1,25 +1,18 @@
 {
   "patients": [
     {
-      "firstName": "Katt",
-      "secondName": "Williams",
-      "nationalId": "34680785",
-      "telephoneNo": "0720247980",
-      "id": 1
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Williams",
-      "nationalId": "34680785",
-      "telephoneNo": "0720247986",
-      "id": 2
-    },
-    {
       "firstName": "Wiz",
       "secondName": "kid",
       "nationalId": "34680785",
       "telephoneNo": "34680785",
       "id": 3
+    },
+    {
+      "firstName": "Allen",
+      "secondName": "Shamrock",
+      "nationalId": "34680785",
+      "telephoneNo": "34680785",
+      "id": 4
     }
   ],
   "doctors": [

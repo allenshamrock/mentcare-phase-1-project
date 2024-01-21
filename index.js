@@ -13,6 +13,8 @@ function toggleForm(formId) {
   }
 }
 
+
+
 //Event Listener
 const form = document
   .querySelector("#newPatientForm")
@@ -69,6 +71,7 @@ function sendData(patientObj) {
     .catch((error) => console.error("Failed to post data", error));
 }
 
+
 // Get method to fetch for the Dr names
 // Event handler
 document
@@ -100,7 +103,7 @@ function fetchTherapists() {
 
       if (isDoctorAvailable) {
         // If there is an available doctor, show the alert
-        alert(`Appointment booked with a doctor ${input}`);
+        alert(`Appointment booked with ${input}`);
       } else {
         // Handle case when no doctors are available
         alert("Sorry, no available doctors with the provided name.");
@@ -109,23 +112,25 @@ function fetchTherapists() {
     .catch((error) => console.error("Failed to post data", error));
 }
 
+
 //Event Listener
-const email = document.querySelector("#emailForm");
+const email = document.querySelector("#emailForm")
 email.addEventListener("submit", submitEmail);
 //Event handler
-function submitEmail(e) {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const textarea = document.getElementById("text").value;
-  let emailObj = {
-    name: name,
-    email: email,
-    textarea: textarea,
-  };
-  alert(`${name} your email has been recieved `);
-  sendEmail(emailObj);
+function submitEmail(e){
+  e.preventDefault()
+  const name = document.getElementById('name').value
+  const email =document.getElementById('email').value
+  const textarea = document.getElementById('text').value
+  let emailObj={
+    name:name,
+    email:email,
+    textarea:textarea
+  }
+  alert(`${name} your email has been recieved `)
+  sendEmail(emailObj)
 }
+
 
 //Feedback email response or inquiry,POST method
 function sendEmail(emailObj) {
@@ -147,3 +152,4 @@ function sendEmail(emailObj) {
     })
     .catch((error) => console.error("Failed to post data", error));
 }
+
