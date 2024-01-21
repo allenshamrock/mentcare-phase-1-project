@@ -19,3 +19,7 @@ For the been here before form, a user can input the therapists name that has bee
 
 Trello board link https://trello.com/b/WRR1NHpA/mentcare-board
 Excaliboard link https://excalidraw.com/
+
+Author 
+Allen Shamrock
+

@@ -358,7 +358,7 @@ input {
 /* faq section */
 .faq-container {
   height: 450px;
-  margin-top: 50px ;
+  margin-top: 50px;
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
@@ -368,9 +368,11 @@ input {
   flex-direction: column;
 }
 
-.faq-container h3{
+.faq-container h3 {
   text-align: center;
-  padding: 10;
+
+  font-size: 3rem;
+  color: #288f94;
 }
 
 .faq-item {
@@ -379,6 +381,7 @@ input {
 }
 
 .question {
+  margin-top: 30px;
   font-size: 18px;
   font-weight: bold;
   color: #333;
@@ -390,5 +393,4 @@ input {
   color: #555;
   margin-top: 10px;
   max-width: 800px;
-
 }

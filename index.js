@@ -25,15 +25,12 @@ function sendData(patientObj) {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`Failed to post data. Status: ${response.status}`);
+        throw new Error(`Failed to post data.`);
       }
       return response.json();
     })
     .then((data) => {
       console.log(data);
-      const inputFirstName = document.getElementById('firstName').value
-      const inputSecondName = document.getElementById('secondName').value
-      alert(`${inputFirstName} ${inputSecondName} your appointment has been made`);
     })
 
     .catch((error) => console.error("Failed to post data", error));
@@ -48,15 +45,28 @@ const form = document
 //Event handler
 function handleSubmit(e) {
   e.preventDefault();
+  const inputFirstName = document.getElementById("firstName").value;
+  const inputSecondName = document.getElementById("secondName").value;
+  const inputNationalId = document.getElementById("nationalId").value;
+  const inputTelephoneNo = document.getElementById("telephoneNo").value
   //console.log('I have been submitted')
-  let patientObj = {
-    firstName: e.target.firstName.value,
-    secondName: e.target.secondName.value,
-    nationalId: e.target.nationalId.value,
-    telephoneNo: e.target.telephoneNo.value,
-  };
-  //console.log(patientObj);
-  sendData(patientObj);
+  if (isNaN(inputNationalId) || inputNationalId.length !== 8) {
+    alert(`Enter numbers with 8 characters in the National ID input`);
+  } else if (isNaN(inputTelephoneNo) || inputTelephoneNo.length !== 10) {
+    alert("Enter numbers consisting 10 characters in the Telephone No input");
+  } else {
+    let patientObj = {
+      firstName: e.target.firstName.value,
+      secondName: e.target.secondName.value,
+      nationalId: e.target.nationalId.value,
+      telephoneNo: e.target.telephoneNo.value,
+    };
+    alert(
+      `${inputFirstName} ${inputSecondName} your appointment has been made`
+    );
+    //console.log(patientObj);
+    sendData(patientObj);
+  }
 }
 
 // Get method to fetch for the Dr names
@@ -68,8 +78,8 @@ document
 //Get method to fetch for the Dr names
 function handlerSubmit(e) {
   e.preventDefault();
-  const doctorName = e.target.value;
-  fetchTherapists(doctorName);
+ //const doctorName = e.target.value;
+  fetchTherapists();
 }
 
 // Get method to fetch for the Dr names
@@ -77,7 +87,7 @@ function fetchTherapists() {
   fetch("http://localhost:3000/doctors")
     .then((response) => {
       if (!response.ok) {
-        throw new Error(`Failed to fetch data: Status: ${response.status}`);
+        throw new Error(`Failed to fetch data`);
       }
       return response.json();
     })
@@ -90,10 +100,11 @@ function fetchTherapists() {
 
       if (isDoctorAvailable) {
         // If there is an available doctor, show the alert
-        alert(`Appointment booked with a doctor having the name ${input}`);
+        alert(`Appointment booked with a doctor ${input}`);
       } else {
         // Handle case when no doctors are available
         alert("Sorry, no available doctors with the provided name.");
       }
-    });
+    })
+    .catch((error) => console.error("Failed to post data", error));
 }

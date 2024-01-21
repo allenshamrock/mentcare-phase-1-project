@@ -1,151 +1,18 @@
 {
   "patients": [
     {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
+      "firstName": "Katt",
+      "secondName": "Williams",
+      "nationalId": "34680785",
+      "telephoneNo": "0720247980",
       "id": 1
     },
     {
-      "firstName": "Kanyi",
-      "secondName": "East",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
+      "firstName": "Allen",
+      "secondName": "Williams",
+      "nationalId": "34680785",
+      "telephoneNo": "0720247986",
       "id": 2
-    },
-    {
-      "firstName": "Katt",
-      "secondName": "Williams",
-      "nationalId": "34680785",
-      "telephoneNo": "0720247980",
-      "id": 3
-    },
-    {
-      "firstName": "Mr",
-      "secondName": "Money",
-      "nationalId": "36566773",
-      "telephoneNo": "0757772601",
-      "id": 4
-    },
-    {
-      "firstName": "Katt",
-      "secondName": "Williams",
-      "nationalId": "3689755",
-      "telephoneNo": "0720247980",
-      "id": 5
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "36566773",
-      "telephoneNo": "0757772601",
-      "id": 6
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "36566773",
-      "telephoneNo": "0757772601",
-      "id": 7
-    },
-    {
-      "firstName": "Sauti",
-      "secondName": "sol",
-      "nationalId": "3689755",
-      "telephoneNo": "0720247980",
-      "id": 8
-    },
-    {
-      "firstName": "Sauti",
-      "secondName": "sol",
-      "nationalId": "3689755",
-      "telephoneNo": "0720247980",
-      "id": 9
-    },
-    {
-      "firstName": "Sauti",
-      "secondName": "sol",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 10
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 11
-    },
-    {
-      "firstName": "Katt",
-      "secondName": "Williams",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 12
-    },
-    {
-      "firstName": "Sauti",
-      "secondName": "East",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 13
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "3689755",
-      "telephoneNo": "0720247980",
-      "id": 14
-    },
-    {
-      "firstName": "",
-      "secondName": "",
-      "nationalId": "",
-      "telephoneNo": "",
-      "id": 15
-    },
-    {
-      "firstName": "",
-      "secondName": "",
-      "nationalId": "",
-      "telephoneNo": "",
-      "id": 16
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "36566773",
-      "telephoneNo": "0757772601",
-      "id": 17
-    },
-    {
-      "firstName": "Valentine ",
-      "secondName": "Iroya",
-      "nationalId": "37141266",
-      "telephoneNo": "0793521594",
-      "id": 18
-    },
-    {
-      "firstName": "Valentine ",
-      "secondName": "Iroya",
-      "nationalId": "34680785",
-      "telephoneNo": "0757772601",
-      "id": 19
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Williams",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 20
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "3689755",
-      "telephoneNo": "0757772601",
-      "id": 21
     }
   ],
   "doctors": [
