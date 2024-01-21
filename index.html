@@ -90,22 +90,26 @@
 
           <div class="contact-container" id="contact">
             <h3>Contact Us</h3>
-            <form action="" class="flex-col">
+            <form action="" class="flex-col" id="emailForm">
               <label for="Name">Name</label>
-              <input class="name" type="text" />
+              <input class="name" type="text" required  id="name"/>
               <br>
               <label for="Email">Email</label>
-              <input class="email" type="text"  />
+              <input class="email" type="text"  required id="email"/>
               <!-- <label for="How can we help you?"></label> -->
               <textarea
                 class="help"
+                id="text"
                 name="How can we help you?" 
                 placeholder="How can we help you?"
                 id=""
                 cols="30"
                 rows="10"
               ></textarea>
+                <button  class="btn submitEmailBtn" id="emailSubmit" >Submit </button>
+
             </form>
+
           </div>
           
         </section>

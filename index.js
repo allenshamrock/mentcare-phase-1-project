@@ -13,6 +13,39 @@ function toggleForm(formId) {
   }
 }
 
+//Event Listener
+const form = document
+  .querySelector("#newPatientForm")
+  .addEventListener("submit", handleSubmit);
+// console.log(form)
+
+//Event handler
+function handleSubmit(e) {
+  e.preventDefault();
+  const inputFirstName = document.getElementById("firstName").value;
+  const inputSecondName = document.getElementById("secondName").value;
+  const inputNationalId = document.getElementById("nationalId").value;
+  const inputTelephoneNo = document.getElementById("telephoneNo").value;
+  //console.log('I have been submitted')
+  if (isNaN(inputNationalId) || inputNationalId.length !== 8) {
+    alert(`Enter numbers with 8 characters in the National ID input`);
+  } else if (isNaN(inputTelephoneNo) || inputTelephoneNo.length !== 10) {
+    alert("Enter numbers consisting 10 characters in the Telephone No input");
+  } else {
+    let patientObj = {
+      firstName: inputFirstName,
+      secondName: inputSecondName,
+      nationalId: inputNationalId,
+      telephoneNo: inputNationalId,
+    };
+    alert(
+      `${inputFirstName} ${inputSecondName} your appointment has been made`
+    );
+    //console.log(patientObj);
+    sendData(patientObj);
+  }
+}
+
 //using POST method to post patients data to db server
 function sendData(patientObj) {
   fetch(" http://localhost:3000/patients", {
@@ -36,39 +69,6 @@ function sendData(patientObj) {
     .catch((error) => console.error("Failed to post data", error));
 }
 
-//Event Listener
-const form = document
-  .querySelector("#newPatientForm")
-  .addEventListener("submit", handleSubmit);
-// console.log(form)
-
-//Event handler
-function handleSubmit(e) {
-  e.preventDefault();
-  const inputFirstName = document.getElementById("firstName").value;
-  const inputSecondName = document.getElementById("secondName").value;
-  const inputNationalId = document.getElementById("nationalId").value;
-  const inputTelephoneNo = document.getElementById("telephoneNo").value
-  //console.log('I have been submitted')
-  if (isNaN(inputNationalId) || inputNationalId.length !== 8) {
-    alert(`Enter numbers with 8 characters in the National ID input`);
-  } else if (isNaN(inputTelephoneNo) || inputTelephoneNo.length !== 10) {
-    alert("Enter numbers consisting 10 characters in the Telephone No input");
-  } else {
-    let patientObj = {
-      firstName: e.target.firstName.value,
-      secondName: e.target.secondName.value,
-      nationalId: e.target.nationalId.value,
-      telephoneNo: e.target.telephoneNo.value,
-    };
-    alert(
-      `${inputFirstName} ${inputSecondName} your appointment has been made`
-    );
-    //console.log(patientObj);
-    sendData(patientObj);
-  }
-}
-
 // Get method to fetch for the Dr names
 // Event handler
 document
@@ -78,7 +78,7 @@ document
 //Get method to fetch for the Dr names
 function handlerSubmit(e) {
   e.preventDefault();
- //const doctorName = e.target.value;
+  //const doctorName = e.target.value;
   fetchTherapists();
 }
 
@@ -105,6 +105,45 @@ function fetchTherapists() {
         // Handle case when no doctors are available
         alert("Sorry, no available doctors with the provided name.");
       }
+    })
+    .catch((error) => console.error("Failed to post data", error));
+}
+
+//Event Listener
+const email = document.querySelector("#emailForm");
+email.addEventListener("submit", submitEmail);
+//Event handler
+function submitEmail(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const textarea = document.getElementById("text").value;
+  let emailObj = {
+    name: name,
+    email: email,
+    textarea: textarea,
+  };
+  alert(`${name} your email has been recieved `);
+  sendEmail(emailObj);
+}
+
+//Feedback email response or inquiry,POST method
+function sendEmail(emailObj) {
+  fetch(" http://localhost:3000/emails", {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+    },
+    body: JSON.stringify(emailObj),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to post data");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
     })
     .catch((error) => console.error("Failed to post data", error));
 }
