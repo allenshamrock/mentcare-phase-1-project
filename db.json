@@ -6,14 +6,8 @@
       "nationalId": "34680785",
       "telephoneNo": "34680785",
       "id": 3
-    },
-    {
-      "firstName": "Allen",
-      "secondName": "Shamrock",
-      "nationalId": "34680785",
-      "telephoneNo": "34680785",
-      "id": 4
     }
+   
   ],
   "doctors": [
     {
@@ -53,6 +47,12 @@
       "email": "allen@gmail.com",
       "textarea": "Hey there!",
       "id": 1
+    },
+    {
+      "name": "allen",
+      "email": "allen@gmail.com",
+      "textarea": "Hey there!",
+      "id": 2
     }
   ]
 }

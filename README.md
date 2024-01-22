@@ -10,6 +10,7 @@ While significant strides have been made in addressing traditional health concer
 Despite the progress made in extending life expectancy and reducing communicable diseases, the burden of mental health disorders is steadily on the rise. Mental health-related issues, encompassing conditions such as depression, anxiety, and suicide, have become a pervasive global challenge, affecting individuals across age groups, socio-economic backgrounds, and geographical locations. This burgeoning crisis is not only undermining individual health but also exerting a profound impact on the fabric of communities and societies at large.
 
 Running
+https://mentcare-phase-1-project.vercel.app/
 
 In the Appointment section there are two forms new appointment and been here before
 For the new appointment form a user inputs their details and the window alerts that sesion has been booked,

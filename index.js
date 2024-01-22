@@ -13,8 +13,6 @@ function toggleForm(formId) {
   }
 }
 
-
-
 //Event Listener
 const form = document
   .querySelector("#newPatientForm")
@@ -50,7 +48,7 @@ function handleSubmit(e) {
 
 //using POST method to post patients data to db server
 function sendData(patientObj) {
-  fetch(" http://localhost:3000/patients", {
+  fetch(" https://db-server-3onv.onrender.com/patients", {
     method: "POST",
     headers: {
       "content-Type": "application/json",
@@ -71,7 +69,6 @@ function sendData(patientObj) {
     .catch((error) => console.error("Failed to post data", error));
 }
 
-
 // Get method to fetch for the Dr names
 // Event handler
 document
@@ -87,7 +84,7 @@ function handlerSubmit(e) {
 
 // Get method to fetch for the Dr names
 function fetchTherapists() {
-  fetch("http://localhost:3000/doctors")
+  fetch("https://db-server-3onv.onrender.com/doctors")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`Failed to fetch data`);
@@ -112,29 +109,27 @@ function fetchTherapists() {
     .catch((error) => console.error("Failed to post data", error));
 }
 
-
 //Event Listener
-const email = document.querySelector("#emailForm")
+const email = document.querySelector("#emailForm");
 email.addEventListener("submit", submitEmail);
 //Event handler
-function submitEmail(e){
-  e.preventDefault()
-  const name = document.getElementById('name').value
-  const email =document.getElementById('email').value
-  const textarea = document.getElementById('text').value
-  let emailObj={
-    name:name,
-    email:email,
-    textarea:textarea
-  }
-  alert(`${name} your email has been recieved `)
-  sendEmail(emailObj)
+function submitEmail(e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const textarea = document.getElementById("text").value;
+  let emailObj = {
+    name: name,
+    email: email,
+    textarea: textarea,
+  };
+  alert(`${name} your email has been recieved `);
+  sendEmail(emailObj);
 }
-
 
 //Feedback email response or inquiry,POST method
 function sendEmail(emailObj) {
-  fetch(" http://localhost:3000/emails", {
+  fetch(" https://db-server-3onv.onrender.com/emails", {
     method: "POST",
     headers: {
       "content-type": "application/json",
@@ -152,4 +147,3 @@ function sendEmail(emailObj) {
     })
     .catch((error) => console.error("Failed to post data", error));
 }
-
