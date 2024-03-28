@@ -403,3 +403,86 @@ input {
   margin-top: 10px;
   max-width: 800px;
 }
+
+
+@media (max-width: 767px) {
+  header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul {
+    margin-top: 20px;
+    gap: 15px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .hero-section {
+    height: auto;
+    min-height: 300px;
+  }
+
+  .contact-container {
+    position: static;
+    margin-top: 20px;
+    padding: 10px;
+    max-height: none;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .contact-container form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .submitEmailBtn {
+    position: relative;
+    bottom: auto;
+    width: 100%;
+  }
+
+  .welcome p {
+    width: 100%;
+  }
+
+  .how-it-workers-container,
+  .services,
+  .form-container,
+  .faq-container {
+    height: auto;
+    min-height: 400px;
+    padding: 20px 10px;
+  }
+}
+
+/* Tablet View */
+@media (min-width: 768px) and (max-width: 1023px) {
+  header nav ul {
+    gap: 20px;
+  }
+
+  .hero-section {
+    height: 400px;
+  }
+
+  .contact-container {
+    width: 350px;
+  }
+
+  .welcome p {
+    width: 60%;
+  }
+
+  .how-it-workers-container,
+  .services,
+  .form-container,
+  .faq-container {
+    height: auto;
+    min-height: 450px;
+  }
+}
